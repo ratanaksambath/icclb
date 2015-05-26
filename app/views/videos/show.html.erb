@@ -1,0 +1,28 @@
+<link href="http://vjs.zencdn.net/4.9/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/4.9/video.js"></script>
+<script>
+  var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
+
+  if (isFirefox){
+    videojs.options.techOrder = ['flash', 'html5'];  
+  }
+  else{
+    videojs.options.techOrder = ['html5', 'flash'];
+  }
+  
+</script>
+<div class="container">
+<h2><%= @video.title %> </h2>
+	<video class="video-js vjs-default-skin" controls preload="none" width="560" height="315" data-setup='{}'>
+	    <source src="https://livesplitter.s3.amazonaws.com/uploads/videos/<%= @video.s3 %>" type='video/mp4' />
+
+	    <object id="flash_fallback_1" class="vjs-flash-fallback" width="560" height="315" type="application/x-shockwave-flash" 
+        data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+        <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+        <param name="allowfullscreen" value="true" />
+        <param name="flashvars" 
+          value='config={"playlist":[{"url": "https://livesplitter.s3.amazonaws.com/uploads/videos/<%= @video.s3 %>","autoPlay":false,"autoBuffering":true}]}' />
+      </object>
+  	</video>
+	   
+</div>

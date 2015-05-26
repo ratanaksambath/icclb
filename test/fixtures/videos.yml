@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  s3: MyString
+  server: MyString
+
+two:
+  title: MyString
+  s3: MyString
+  server: MyString
