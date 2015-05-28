@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<%= image_tag("header.jpg", :class => "header-img" ) %>
+<div class="container>">
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+</div>
 <%= render 'layouts/header' %>
 <%= yield %>
 
