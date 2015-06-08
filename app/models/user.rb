@@ -8,5 +8,6 @@ class User < ActiveRecord::Base
 	  validates :sign_up_code,
 	    on: :create,
 	    presence: true,
-		inclusion: { in: proc { InviteCode.where( used: false ).map( &:code ) } }
+		#inclusion: { in: proc { InviteCode.where( used: false ).map( &:code ) } }
+		inclusion: { in: ["springhearings1"] }
 end
