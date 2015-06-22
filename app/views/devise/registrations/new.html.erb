@@ -6,7 +6,7 @@
   
   <div class="field">
     <%= f.label 'password' %><br />
-    <%= f.text_field :sign_up_code, autofocus: true %>
+    <%= f.text_field :membership_type, autofocus: true %>
   </div>
 
   <div class="field">
@@ -28,13 +28,12 @@
   <div class="field">
     <% if @validatable %>
     <% end %><br />
-    <%= f.hidden_field :password, value: "springhearings1" %>
+    <%= f.hidden_field :password, value: :sign_up_code %>
   </div>
 
   <div class="field">
-    <%= f.hidden_field :password_confirmation, value: "springhearings1" %>
+    <%= f.hidden_field :password_confirmation, value: :sign_up_code %>
   </div>
-
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
         :email, 
         :password, 
         :password_confirmation,
+        :membership_type,
         :sign_up_code
     ) }
   end

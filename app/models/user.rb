@@ -4,10 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-	attr_accessor :sign_up_code
-	  validates :sign_up_code,
-	    on: :create,
-	    presence: true,
-		#inclusion: { in: proc { InviteCode.where( used: false ).map( &:code ) } }
-		inclusion: { in: ["springhearings1"] }
+  validates :membership_type,
+    on: :create,
+    presence: true,
+	#inclusion: { in: proc { InviteCode.where( used: false ).map( &:code ) } }
+	inclusion: { in: ["springhearings1","springhearings2"] }
+
 end
