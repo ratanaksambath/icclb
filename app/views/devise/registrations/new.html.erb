@@ -28,11 +28,11 @@
   <div class="field">
     <% if @validatable %>
     <% end %><br />
-    <%= f.hidden_field :password, value: :sign_up_code %>
+    <%= f.hidden_field :password, value: "springhearings" %>
   </div>
 
   <div class="field">
-    <%= f.hidden_field :password_confirmation, value: :sign_up_code %>
+    <%= f.hidden_field :password_confirmation, value: ":springhearings" %>
   </div>
   <div class="actions">
     <%= f.submit "Sign up" %>
