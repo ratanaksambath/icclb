@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   resources :videos do
       collection { post :import }
     end
-  root 'pages#index'
   resources :codes do 
   end
+  root 'codes#index'
   get 'track1' => 'pages#track1'
   get 'track2' => 'pages#track2'
 end

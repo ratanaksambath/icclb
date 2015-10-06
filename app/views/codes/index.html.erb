@@ -1,26 +1,21 @@
 <div class = "container">
   <div class = "row">
-    <div class = "col-md-4">
-      <%= image_tag "3000S15_IBC_md.jpg" , {height: 320, width: 240}  %>
-    </div>
-    <div class = "col-md-4">  
-      <a href="/vidoes">
-        <%= image_tag "3000S15_IBC_md.jpg"  , {height: 320, width: 240} %>
-      </a>
-    </div>
-    <div class = "col-md-4">
-      <%= image_tag "3000S15_IBC_md.jpg"  , {height: 320, width: 240} %>
-    </div>
-  </div>
-  <div class = "row">
-    <div class = "col-md-4"></div>
-    <div class = "col-md-4"></div>
-    <div class = "col-md-4"></div>
-  </div>
-  <div class = "row">
-    <div class = "col-md-4"></div>
-    <div class = "col-md-4"></div>
-    <div class = "col-md-4"></div>
+    <% @codes.each_with_index do |code,index| %>
+      <div class = "col-sm-6 col-md-4">
+        <div class = "thumbnail">
+        <%= image_tag "#{code.image_url}" %>
+        <h3><%= code.name %></h3>
+        <p>Click on the video content button to see all the video lists within this code</p>
+        <p><a href="#" class="btn btn-default" role="button">Videos Content</a></p>
+        </div>
+      </div>
+      <% if (index+1) % 3 == 0 %>
+        <div class = "clearfix"></div>
+      <% end %>
+
+    <% end %>
+
   </div>
   
 </div>
+
