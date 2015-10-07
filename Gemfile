@@ -12,7 +12,7 @@ gem 'devise',  '~> 3.4.0'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'rails_admin'
-
+gem 'hirb'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

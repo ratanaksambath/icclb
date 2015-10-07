@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005191035) do
+ActiveRecord::Schema.define(version: 20151007171149) do
 
   create_table "codes", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.text     "image_url",  limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.string   "title",      limit: 255
   end
 
   create_table "invite_codes", force: :cascade do |t|
@@ -54,6 +55,9 @@ ActiveRecord::Schema.define(version: 20151005191035) do
     t.string   "server",     limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "code_id",    limit: 4
   end
+
+  add_index "videos", ["code_id"], name: "index_videos_on_code_id", using: :btree
 
 end
