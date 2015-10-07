@@ -21,8 +21,8 @@ def create
 end
 
 def show
-  code = Code.find(params[:id])
-  @videos = code.videos
+  @code = Code.find(params[:id])
+  @videos = @code.videos
 end
 
 
