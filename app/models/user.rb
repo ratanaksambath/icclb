@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
     on: :create,
     presence: true,
 	#inclusion: { in: proc { InviteCode.where( used: false ).map( &:code ) } }
-	inclusion: { in: ["springhearings1","springhearings2"] }
+	inclusion: { in: ["iccfall-1","iccfall-2"] }
 
 	after_create :change_password
 
