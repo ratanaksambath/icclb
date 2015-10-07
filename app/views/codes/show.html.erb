@@ -1,1 +1,49 @@
-yolo
+<script>
+$(document).ready(function(){
+    $("#filter").keyup(function(){
+ 
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
+ 
+        // Loop through the comment list
+        $(".video").each(function(){
+ 
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+ 
+            // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                count++;
+            }
+        });
+ 
+        // Update the count
+        var numberItems = count;
+        $("#filter-count").text("Number of Videos = "+count);
+    });
+    
+    $(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+});
+</script>
+
+<div class="container">
+  <h2>Track 1</h2>
+  <form id="live-search" action="" class="styled" method="post">
+      <fieldset>
+          <input type="text" class="form-control" id="filter" value="" placeholder="Search" />
+          <span id="filter-count"></span>
+      </fieldset>
+  </form>
+    <% @videos.each do |video| %>
+      <li class="video"><%= link_to video.title, video %></li>
+    <% end %>
+</div>
