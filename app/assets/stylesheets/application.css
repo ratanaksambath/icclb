@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+body{
+  font-family: "Ubuntu", Arial, sans-serif;
+}
+
 
 .site-footer,
 .site-info,
@@ -130,16 +134,7 @@ li {list-style-type: none;}
     font-weight: 400;
     display: block;
 }
-.profile-img
-{
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 10px;
-    display: block;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
+
 .need-help
 {
     margin-top: 10px;
@@ -148,6 +143,10 @@ li {list-style-type: none;}
 {
     display: block;
     margin-top: 10px;
+}
+
+.center-text{
+  text-align: center;
 }
 
 a:hover { color: black; background-color: transparent; text-decoration: none; }
