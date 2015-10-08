@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     end
   resources :codes do 
   end
-  root 'codes#index'
+  root 'pages#index'
   get 'track1' => 'pages#track1'
   get 'track2' => 'pages#track2'
 end
