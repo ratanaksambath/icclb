@@ -1,7 +1,7 @@
 <div class = "container">
   <div class = "row">
     <% @codes.each_with_index do |code,index| %>
-      <div class = "col-sm-6 col-md-4">
+      <div class = "col-md-3">
         <div class = "thumbnail">
         <%= image_tag "#{code.image_url}" %>
         <h3><%= code.name %></h3>

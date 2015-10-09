@@ -14,9 +14,9 @@
   
 </script>
 <div class="container">
-<h2 class="video-title"><%= @video.title %> </h2>
+<h2 class="video-title"><%= @video.title %></h2>
 	<video class="video-js vjs-default-skin player"controls preload="none" width="560" height="315" data-setup='{}'>
-	    <source src="https://livesplitter.s3.amazonaws.com/uploads/videos/icclb/G60-15.mp4
+	    <source src="https://livesplitter.s3.amazonaws.com/uploads/videos/icclb/<%= @video.title %>.mp4
 " type='video/mp4' />
 
 	    <object id="flash_fallback_1" class="vjs-flash-fallback" width="560" height="315" type="application/x-shockwave-flash" 
@@ -24,7 +24,7 @@
         <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
         <param name="allowfullscreen" value="true" />
         <param name="flashvars" 
-          value='config={"playlist":[{"url": "https://livesplitter.s3.amazonaws.com/uploads/videos/icclb/G60-15.mp4
+          value='config={"playlist":[{"url": "https://livesplitter.s3.amazonaws.com/uploads/videos/icclb/<%= @video.title %>.mp4
 ","autoPlay":false,"autoBuffering":true}]}' />
       </object>
   	</video>
