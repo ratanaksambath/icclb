@@ -14,7 +14,11 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
-
+    @video = Video.find(params[:id])
+    if params[:embed]
+      render layout: "player"
+    else
+    end
   end
 
   # GET /videos/new

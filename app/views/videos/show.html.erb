@@ -1,7 +1,6 @@
 <link href="//vjs.zencdn.net/4.9/video-js.css" rel="stylesheet">
 <script src="//vjs.zencdn.net/4.9/video.js"></script>
 
-<p> <%= @video.title %></p>
 <script>
   var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
 
@@ -13,7 +12,7 @@
   }
   
 </script>
-<div class="container">
+<div class="container" style = "min-height: 500px">
 <h2 class="video-title"><%= @video.title %></h2>
 	<video class="video-js vjs-default-skin player"controls preload="none" width="560" height="315" data-setup='{}'>
 	    <source src="https://livesplitter.s3.amazonaws.com/uploads/videos/icclb/<%= @video.title %>.mp4
@@ -28,5 +27,6 @@
 ","autoPlay":false,"autoBuffering":true}]}' />
       </object>
   	</video>
-     
+
+
 </div>
