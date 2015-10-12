@@ -35,15 +35,31 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="container">
-  <h2><%= @code.name %></h2>
-  <form id="live-search" action="" class="styled" method="post">
-      <fieldset>
+<div class = "container">
+
+  <div class = "row">
+    <div class = "col-sm-12">
+    <form id="live-search" action="" class="styled" method="post">
+        <fieldset>
           <input type="text" class="form-control" id="filter" value="" placeholder="Search" />
           <span id="filter-count"></span>
-      </fieldset>
-  </form>
-    <% @videos.each do |video| %>
-      <li class="video"><%= link_to video.title, video %></li>
-    <% end %>
+        </fieldset>
+      </form>
+    </div>
+    <hr>
+    <% @sections.each do |section| %>
+     <div class = "panel panel-success col-md-4 ">
+       <div class = "pane">
+        <h3><%= section.title %></h3>
+        <ul class = "list-group"> 
+        <% section.videos.each do |video| %> 
+          <%= link_to video.title, video , :class => "video list-group-item"%>
+        <% end %>
+          
+        </ul>
+        </div>
+     </div>
+     <% end %>
+  </div>
 </div>
+

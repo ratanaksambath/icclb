@@ -1,3 +1,3 @@
 class Code < ActiveRecord::Base
-  has_many :videos, dependent: :destroy
+  has_many :sections, dependent: :destroy
 end

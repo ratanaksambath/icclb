@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'rails_admin'
 gem 'hirb'
+gem 'will_paginate-bootstrap'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

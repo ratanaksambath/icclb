@@ -22,7 +22,8 @@ end
 
 def show
   @code = Code.find(params[:id])
-  @videos = @code.videos
+  @sections = @code.sections
+
 end
 
 

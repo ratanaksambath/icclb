@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007171149) do
+ActiveRecord::Schema.define(version: 20151012075850) do
 
   create_table "codes", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 20151007171149) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "sections", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "code_id",     limit: 4
+  end
+
+  add_index "sections", ["code_id"], name: "index_sections_on_code_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -55,9 +65,9 @@ ActiveRecord::Schema.define(version: 20151007171149) do
     t.string   "server",     limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.integer  "code_id",    limit: 4
+    t.integer  "section_id", limit: 4
   end
 
-  add_index "videos", ["code_id"], name: "index_videos_on_code_id", using: :btree
+  add_index "videos", ["section_id"], name: "index_videos_on_section_id", using: :btree
 
 end
