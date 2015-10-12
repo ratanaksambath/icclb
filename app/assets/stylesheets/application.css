@@ -151,8 +151,21 @@ li {list-style-type: none;}
 
 a:hover { color: black; background-color: transparent; text-decoration: none; }
 
+.jumbotron{
+  background-image: url(longbeach.jpg);
+  background-repeat: no-repeat;
+  min-height: 800px;
+  background-size: cover;
+  margin: 0;
+}
 
+.row{
+  padding-top: 80px;
+}
 
+.container{
+  min-height: 700px;
+}
 
 
 
