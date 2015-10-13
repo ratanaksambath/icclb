@@ -53,9 +53,8 @@ $(document).ready(function(){
         <h3><%= section.title %></h3>
         <ul class = "list-group"> 
         <% section.videos.each do |video| %> 
-          <%= link_to video.title, video , :class => "video list-group-item"%>
-        <% end %>
-          
+          <li><%= link_to video.title, video , :class => "video list-group-item"%></li>
+        <% end %>   
         </ul>
         </div>
      </div>
