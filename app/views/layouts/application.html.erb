@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Videos</title>
+  <title>ICC Long Beach</title>
+  <%= favicon_link_tag 'logo.png' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container>">
-  
-  <p class="notice" style = "display:none"><%= notice %></p>
-  <p class="alert" style = "display:none"><%= alert %></p>
-  <% if user_signed_in? %>
-  <% else %>
-      
-	<% end %>
-</div>
+
 <%= render 'layouts/header' %>
+<% if notice || alert %>
+  <%= render 'layouts/alert' %>
+<% end %>
 <%= yield %>
 <%= render 'layouts/footer' %>
 
