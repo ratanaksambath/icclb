@@ -18,4 +18,7 @@ class User < ActiveRecord::Base
   		  self.save
 	end
 
+  def is_admin?
+    self.admin
+  end
 end
