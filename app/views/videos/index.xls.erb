@@ -8,12 +8,12 @@
     <Table>
       <Row>
       <Cell><Data ss:Type="String">Title</Data></Cell>
-      <Cell><Data ss:Type="String">Embed Code</Data></Cell>
+      <Cell><Data ss:Type="String">Link Url</Data></Cell>
       </Row>
     <% @videos.each do |v| %>
       <Row>
         <Cell><Data ss:Type="String"><%= v.title %></Data></Cell>
-        <Cell><Data ss:Type="String"><code>&lt;iframe src="http://icclb.06hub.com/videos/<%= v.id %>"?embed=true width="600" height="480" frameborder="0" scrolling="no" allowfullscreen="true"&gt;&lt;/iframe&gt;</code></Data></Cell>
+        <Cell><Data ss:Type="String"><code>https://s3.amazonaws.com/livesplitter/uploads/videos/icclb/<%= v.title %>.mp4</code></Data></Cell>
       </Row>
     <% end %>
     </Table>
