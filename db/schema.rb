@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013204557) do
+ActiveRecord::Schema.define(version: 20151019214216) do
 
   create_table "codes", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -62,10 +62,10 @@ ActiveRecord::Schema.define(version: 20151013204557) do
 
   create_table "videos", force: :cascade do |t|
     t.string   "title",      limit: 255
-    t.string   "s3",         limit: 255
+    t.boolean  "s3",         limit: 1,   default: false
     t.string   "server",     limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.integer  "section_id", limit: 4
   end
 

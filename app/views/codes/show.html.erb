@@ -52,8 +52,10 @@ $(document).ready(function(){
        <div class = "pane">
         <h3><%= section.title %></h3>
         <ul class = "list-group"> 
-        <% section.videos.each do |video| %> 
+        <% section.videos.each do |video| %>
+          <% if video.s3 %> 
           <li><%= link_to video.title, video , :class => "video list-group-item"%></li>
+          <% end %>
         <% end %>   
         </ul>
         </div>
