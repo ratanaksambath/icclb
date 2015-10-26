@@ -2,13 +2,13 @@
   <div class = "row">
     <% @codes.each_with_index do |code,index| %>
       <div class = "col-md-3">
+        <%= link_to code do %>
         <div class = "thumbnail">
         <%= image_tag "#{code.image_url}" %>
         <h3><%= code.name %></h3>
-        <p>Click on the video content button to see all the video lists within this code</p>
-        <a class = "btn btn-info" href = "/codes/<%= code.id %>"> View Details </a>
         </div>
       </div>
+      <% end %>
       <% if (index+1) % 4 == 0 %>
         <div class = "clearfix"></div>
       <% end %>

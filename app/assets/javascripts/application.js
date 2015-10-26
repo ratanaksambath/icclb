@@ -16,4 +16,5 @@
 //= require_tree .
 $(document).ready(function(){
   $("#alertBox").fadeOut(10000);
+  
 });

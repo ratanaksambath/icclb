@@ -18,6 +18,7 @@ body{
 }
 
 
+
 .site-footer,
 .site-info,
 .site-info a {
@@ -149,8 +150,6 @@ li {list-style-type: none;}
   text-align: center;
 }
 
-a:hover { color: black; background-color: transparent; text-decoration: none; }
-
 .jumbotron{
   background-image: url('<%= asset_path("longbeach.jpg")%>');
   background-repeat: none;
@@ -173,28 +172,76 @@ a:hover { color: black; background-color: transparent; text-decoration: none; }
   text-align:center;
 }
 
+body > nav > div > div.container,
+body > nav > div > div.container > ul,
+body > nav > div > div.container > ul > li,
+body > nav > div > div.container > ul > li a.dropdown-toggle,
+body > nav > div {
+  height: 100% !important;
+}
 
 
+body > nav > div > div.container > ul > li.dropdown > ul {
+  margin-top: -14px !important;
+}
 
+ .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  .dropdown{
+    background-color: white;
+    color: black
+  }
+}
 
+ .dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
 
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
 
+.dropdown-submenu.pull-left {
+    float: none;
+}
 
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+.dropdown-menu.multi-column .dropdown-menu {
+    position: static !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    max-width: 200px;
 
+}
 
+body > nav > div > div.container > ul > li.dropdown > ul > div > div{
+  display: inline-flex !important;
+}
 
+body > nav > div > div.navbar-header{
+  max-width: 40px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.sub-menu a:hover{
+  color:green !important;
+  text-decoration: none !important;
+}
 

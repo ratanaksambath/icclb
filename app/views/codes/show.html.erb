@@ -38,8 +38,10 @@ $(document).ready(function(){
 <div class = "container">
 
   <div class = "row">
+    
     <div class = "col-sm-12">
-    <form id="live-search" action="" class="styled" method="post">
+    <%= link_to "Back To Codes", codes_path , class: "btn btn-success" , style: "margin-bottom: 10px; float: center;"%>
+    <form id="live-search" action="" class="styled" method="post" style = "margin:10px 10px;">
         <fieldset>
           <input type="text" class="form-control" id="filter" value="" placeholder="Search" />
           <span id="filter-count"></span>

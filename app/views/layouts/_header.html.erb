@@ -4,37 +4,435 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        
       </button>
       <a class="navbar-brand" href="/"><img src="http://www.iccsafe.org/wp-content/themes/iccwp/images/logo.png"></a>
     </div>
     <div class="container">
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    
+      <!-- Collect the nav links, forms, and other content for toggling -->
       <ul class="nav navbar-nav navbar-right">
 
-        <% if user_signed_in? %>
-          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-          <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setting <span class="caret"></span></a>
-          <ul class="dropdown-menu" style = "margin-top:14px">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            </li>
-        <% else %>
-        
-        <% end %>
-        
-      </ul>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About ICC <span class="caret"></span></a>
+          <ul class="dropdown-menu multi-column" style = "width:1200px; left:-258px;">
+            <div class = "container-fluid">
+              <div class = "row-fluid" style = "padding:0;margin:0;">
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header">
+                      <a href="#">Overview</a>
+                      <li role="separator" class="divider"></li>
+                      <ul class = "sub-menu">
+                        <li><a href="http://www.iccsafe.org/about-icc/overview/about-international-code-council/">About ICC</a></li>
+                        <li><a href="http://www.iccsafe.org/about-icc/overview/annual-report-2/">Annual Report</a></li>
+                        <li><a title="Vision 2020" href="http://www.iccsafe.org/wp-content/uploads/14-09917_2014_Corp_Vision_2020_DA_Final_web.pdf">Vision 2020</a></li>
+                        <li><a href="http://www.iccsafe.org/icc-bylaws-and-council-policies/">Council Policies</a></li>
+                        <li><a target="_blank" href="http://www.iccsafe.org/AboutICC/Documents/bylaws.pdf">Bylaws</a></li>
+                        <li><a target="_blank" href="http://www.iccsafe.org/AboutICC/Documents/CodeOfEthics.pdf">Code of Ethics</a></li>
+                        <li><a href="http://www.iccsafe.org/about-icc/overview/icc-partners/">ICC Partners</a></li>
+                        <li><a href="http://www.iccsafe.org/about-icc/government-relations/icc-statements-comments/">ICC Statements &amp; Comments</a></li>
+                        <li><a href="http://www.iccsafe.org/about-icc/overview/international-code-adoptions/">I-Codes Adoptions</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header">
+                      <a href="#"> Leadership</a>
+                      <li role="separator" class="divider"></li>
+                      <ul class = "sub-menu">
+                        <li id="menu-item-41584" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-41584"><a href="http://www.iccsafe.org/about-icc/leadership/">Board Of Directors</a></li>
+                        <li id="menu-item-41585" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41585"><a target="_blank" href="http://www.iccsafe.org/AboutICC/Documents/OrgChart.pdf">Organization Chart</a></li>
+                        <li id="menu-item-83154" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-83154"><a href="http://www.iccsafe.org/about-icc/leadership/board-meetings/">Board Meetings</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
 
-   
-   </div>
- </div>
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header">
+                      <a href="#"> Calendar</a>
+                      <li role="separator" class="divider"></li>
+                      <ul class="sub-menu">
+                      <li <a href="http://www.iccsafe.org/events/">ICC Events Calendar</a></li>
+                        <li ><a href="http://www.iccsafe.org/about-icc/calendar/annual-conferences-hearings/annual-meetings/">Annual Conference</a></li>
+                        <li <a href="http://www.iccsafe.org/about-icc/calendar/annual-conferences-hearings/future-annual-meetings/">Future Annual Meetings</a></li>
+                        <li ><a href="http://www.iccsafe.org/about-icc/calendar/building-safety-design-expo/">Building Safety Expo</a></li>
+                        <li ><a href="#">Building Safety Month</a>
+                          <ul class="sub-menu">
+                            <li><a href="http://www.iccsafe.org/about-icc/building-safety-month/2015-building-safety-month-is-may/">Overview</a></li>
+                            <li><a target="_blank" href="/BSM/Documents/2015/2015-BSM-Letter.pdf">Welcome to Building Safety Month</a></li>
+                            <li><a href="http://www.iccsafe.org/about-icc/building-safety-month/2015-proclamations/">Proclamations</a></li>
+                            <li><a href="http://www.iccsafe.org/about-icc/building-safety-month/building-safety-month-events/">Events</a></li>
+                            <li><a href="http://www.iccsafe.org/about-icc/building-safety-month/in-the-news/">In The News</a></li>
+                            <li><a href="http://www.iccsafe.org/about-icc/building-safety-month/photos/">Photos &amp; Videos</a></li>
+                            <li><a href="http://www.iccsafe.org/about-icc/building-safety-month/campaign-toolkit/">Campaign Toolkit</a></li>
+                            <li><a href="http://www.iccsafe.org/about-icc/building-safety-month/become-a-sponsor/">Sponsors</a></li>
+                            <li><a href="http://www.iccsafe.org/about-icc/building-safety-month/2014-archives/building-safety-month-2014/">2014 Archives</a></li>
+                            <li><a href="http://www.iccsafe.org/about-icc/building-safety-month/2013-archives/building-safety-month-2013/">2013 Archives</a></li>
+                          </ul>
+                        </li>
+                        <li id="menu-item-17603" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17603"><a href="http://www.iccsafe.org/events/category/codes-standards-calendar/">Codes &amp; Standards</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header">
+                      <a href="#"> Periodicals and Newsroom</a>
+                      <li role="separator" class="divider"></li>
+                      <ul class = "sub-menu">
+                        <li><a href="http://www.iccsafe.org/about-icc/periodicals-and-newsroom/news-overview/">Overview</a></li>
+                        <li><a href="http://www.iccsafe.org/about-icc/periodicals-and-newsroom/periodicals/">Periodicals</a></li>
+                        <li><a href="http://www.iccsafe.org/about-icc/newsroom-3/">Newsroom</a></li>
+                        <li><a href="http://www.iccsafe.org/about-icc/periodicals-and-newsroom/key-changes-in-the-2015-international-codes-i-codes/">2015 Code Changes</a></li>
+                        <li><a href="http://www.iccsafe.org/about-icc/periodicals-and-newsroom/subscribe/">Subscribe</a></li>
+
+                      </ul>
+                    </li>
+                  </ul>
+                </div>                
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header">
+                      <a href="#"> Career in Building Safety</a>
+                      <li role="separator" class="divider"></li>
+                      <ul class = "sub-menu">
+                        <li><a target="_blank" href="http://jobs.iccsafe.org/">Job Board</a></li>
+                        <li><a href="http://www.iccsafe.org/about-icc/career-in-building-safety/high-school-technical-training-program-tool-kit/">High School Technical Training Toolkit</a></li>
+                        <li><a href="http://www.iccsafe.org/about-icc/career-in-building-safety/degree-programs/">Degree Programs</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>  
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header">
+                      <a href="#"> Consumer Safety Resources</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <ul class = "sub-menu">
+                      <li><a href="http://www.iccsafe.org/about-icc/safety/public-safety/">Public Safety</a></li>
+                      <li><a href="http://www.iccsafe.org/about-icc/safety/hurricane-safety/">Hurricane Safety</a></li>
+                      <li><a href="http://www.iccsafe.org/about-icc/safety/consumer-safety-tips/">Consumer Safety Tips</a></li>
+                      <li><a href="http://www.iccsafe.org/about-icc/safety/is-your-backyard-party-friendly/">Is Your Backyard Party Friendly?</a></li>
+                      <li><a href="http://www.iccsafe.org/about-icc/safety/accessibility-info/">Accessibility Info</a></li>
+                      <li><a href="http://www.iccsafe.org/about-icc/safety/wildfire-safety/">Wildfire Safety</a></li>
+                    </ul>                    
+                  </ul>
+                </div>  
+              </div>
+            </div>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Membership <span class="caret"></span></a>
+          <ul class="dropdown-menu multi-column" style = "width:1200px; left:-261%; align:center">
+            <div class = "container-fluid">
+              <div class = "row-fluid" style = "padding:0;margin:0;">  
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="http://www.iccsafe.org/membership/icc-membership-toolkit/">Overview</a></li>
+                    <li role = "separator" class = "divider"></li>
+                  </ul>
+                </div>
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="http://www.iccsafe.org/#">Join or Renew</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                      <li><a href="http://www.iccsafe.org/membership/join-icc-dues-applications/">Join ICC (Dues &amp; Applications)</a></li>
+                      <li><a href="http://www.iccsafe.org/membership/renewreinstate-membership/">Renew/Reinstate</a></li>
+                      <li><a href="http://www.iccsafe.org/membership/membership-benefits/">Membership Benefits</a></li>
+                    </ul>
+                  </ul>
+                </div>
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="http://www.iccsafe.org/membership/membership/">Member News</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                    <li><a href="http://www.iccsafe.org/membership/chapters/chapters-of-the-international-code-council/">Overview</a></li>
+                    <li><a href="http://www.iccsafe.org/membership/chapters/chapter-benefits/">Benefits</a></li>
+                      <li><a href="http://www.iccsafe.org/membership/chapters/chapter-education-benefit/">Training</a></li>
+                      <li><a href="http://www.iccsafe.org/membership/chapters/regional-chapters/">Regional Chapters</a></li>
+                      <li><a target="_blank" href="https://av.iccsafe.org/eweb/dynamicpage.aspx?webcode=ICC_MyChapters&amp;Site=ICC">My Chapters</a></li>
+                      <li><a href="http://www.iccsafe.org/membership/news-resources/">Chapter News</a></li>
+                      <li><a href="http://www.iccsafe.org/membership/chapters/icc-chapters-and-boardstaff-liaison-map/">Chapter Info by State</a></li>
+                      <li><a href="http://www.iccsafe.org/membership/chapters/icc-chapter-meeting-request-2/">ICC Chapter Meeting Request</a></li>
+                    </ul>
+                  </ul>
+                </div>
+
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="#">Councils and Committees</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                      <li><a href="http://www.iccsafe.org/membership/councils-committees/call-for-committees-2/">Call for Committees</a></li>
+                      <li><a href="#">Membership Councils</a>
+                        <ul class="sub-menu">
+                          <li><a href="http://www.iccsafe.org/membership/membership-councils/building-official-membership-council/">Building Official Membership Council</a></li>
+                          <li><a href="http://www.iccsafe.org/membership/membership-councils/fire-service-membership-council/">Fire Service Membership Council</a></li>
+                          <li><a href="http://www.iccsafe.org/membership/membership-councils/pmg-official-membership-council/">PMG Official Membership Council</a></li>
+                          <li><a href="http://www.iccsafe.org/membership/membership-councils/sustainability-membership-council/">Sustainability Membership Council</a></li>
+                          <li ><a href="http://www.iccsafe.org/membership/membership-councils/icc-global-membership-council/">ICC Global Membership Council</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="http://www.iccsafe.org/membership/councils-committees/major-jurisdiction-committee/">Major Jurisdiction Committee</a>
+                        <ul class="sub-menu">
+                          <li><a href="http://www.iccsafe.org/membership/councils-committees/major-jurisdiction-committee/best-practices/">Best Practices</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+                
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a title="cdpACCESS" target="_blank" href="http://www.iccsafe.org/cdpaccess">cdpACCESS</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                    <li><a title="Go to cdpACCESS" target="_blank" href="http://cdpaccess.com">Go to cdpACCESS</a></li>
+                    <li><a href="https://av.iccsafe.org/eweb/dynamicpage.aspx?webcode=OrgVoterReg&amp;Site=icc">Electronic Voter Validation</a></li>
+                    <li><a href="http://www.iccsafe.org/membership/voter-validation-process-faqs/">Voter Validation Process FAQs</a></li>
+                  </ul>
+                  </ul>
+                </div>
+
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="#">Scholarships</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                      <li><a href="http://www.iccsafe.org/education-certification/education/scholarships/">Introduction</a></li>
+                      <li><a href="http://www.iccsafe.org/membership/scholarships/code-of-honor-scholarships/">Code of Honor</a></li>
+                      <li><a href="http://www.iccsafe.org/membership/scholarships/managed-scholarships/">Managed</a></li>
+                      <li><a href="http://www.iccsafe.org/membership/scholarships/sponsored-scholarships/">Sponsored</a></li>
+                    </ul>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Codes &amp; Tech Support <span class="caret"></span></a>
+          <ul class = "dropdown-menu multi-column" style = "width:1200px; left:-236%; align:center">
+            <div class = "container-fluid">
+              <div class = "row-fluid" style = "padding:0;margin:0;">
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="#">Codes</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                      <li id="menu-item-43251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-43251"><a href="#">2015 I-Codes</a>
+                        <ul class="sub-menu">
+                          <li id="menu-item-42465" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42465"><a href="http://www.iccsafe.org/codes-tech-support/codes/2015-i-codes/irc/">IRC</a></li>
+                          <li id="menu-item-42466" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42466"><a href="http://www.iccsafe.org/codes-tech-support/codes/2015-i-codes/iecc/">IECC</a></li>
+                          <li id="menu-item-42467" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42467"><a href="http://www.iccsafe.org/codes-tech-support/codes/2015-i-codes/ifc/">IFC</a></li>
+                          <li id="menu-item-42468" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42468"><a href="http://www.iccsafe.org/codes-tech-support/codes/2015-i-codes/ibc/">IBC</a></li>
+                          <li id="menu-item-42469" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42469"><a href="http://www.iccsafe.org/codes-tech-support/codes/2015-i-codes/igcc/">IgCC</a></li>
+                          <li id="menu-item-42471" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42471"><a href="http://www.iccsafe.org/codes-tech-support/codes/2015-i-codes/plumbing-mechanical-fuel-gas-and-swimming-poolsspas/">Plumbing, Mechanical, Fuel Gas and Swimming Pools/Spas</a></li>
+                        </ul>
+                        <li id="menu-item-43252" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-43252"><a href="#">Code Development</a>
+                          <ul class="sub-menu">
+                            <li id="menu-item-42473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42473"><a title="cdpACCESS" target="_blank" href="http://www.iccsafe.org/cdpaccess">cdpACCESS</a></li>
+                            <li id="menu-item-46438" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-46438"><a href="http://www.iccsafe.org/codes-tech-support/codes/code-development/current-code-development-cycle/">Current Code Development Cycle</a></li>
+                            <li id="menu-item-46360" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-46360"><a href="http://www.iccsafe.org/codes-tech-support/codes/code-development/20152017-code-development-group-a/">2015/2017 Code Development: Group A</a></li>
+                            <li id="menu-item-42476" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42476"><a href="http://www.iccsafe.org/codes-tech-support/codes/code-development/code-development-procedures/">Code Development Principles</a></li>
+                            <li id="menu-item-42477" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42477"><a href="http://www.iccsafe.org/codes-tech-support/code-development-process/">Code Development Process</a></li>
+                            <li id="menu-item-42478" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42478"><a href="http://www.iccsafe.org/codes-tech-support/codes/code-development/code-development-archives/">Code Development Archives</a></li>
+                          </ul>  
+                        </li>
+                        <li id="menu-item-42492" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42492"><a href="http://www.iccsafe.org/events/category/codes-standards-calendar/">Calendar</a></li>
+                        <li id="menu-item-45820" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-45820"><a href="http://www.iccsafe.org/codes-tech-support/codes/committees-and-councils/">Committees and Councils</a></li>
+                        <li id="menu-item-42494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42494"><a href="http://www.iccsafe.org/errata-central/">Errata Central</a></li>
+                        <li id="menu-item-42493" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42493"><a target="_blank" href="http://codes.iccsafe.org/">Free Resources</a></li>
+                  </ul> 
+                </div>
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="#">Standards</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                      <li id="menu-item-42497" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42497"><a href="http://www.iccsafe.org/codes-tech-support/codes/code-development-process/standards-development/standard-development-process/">Standard Development Process</a></li>
+                      <li id="menu-item-42496" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42496"><a href="http://www.iccsafe.org/codes-tech-support/codes/code-development-process/standards-development/standard-development-committees/">Standard Development Committees</a></li>
+                      <li id="menu-item-42498" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42498"><a href="http://www.iccsafe.org/errata-central/">Errata Central</a></li>
+                      <li id="menu-item-42499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42499"><a href="http://www.iccsafe.org/events/category/codes-standards-calendar/">Calendar</a></li>
+                    </ul>
+                  </ul>
+                </div>
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="http://www.iccsafe.org/codes-tech-support/guideline-development/">Guidelines</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                      <li id="menu-item-83155" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-83155"><a href="http://www.iccsafe.org/codes-tech-support/guideline-development/">Guideline Development</a></li>
+                      <li id="menu-item-78602" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-78602"><a href="http://www.iccsafe.org/codes-tech-support/guideline-development/ctc-area-of-study-unenclosed-exit-stairs/">CTC Area of Study: Unenclosed Exit Stairs</a></li>
+                      <li id="menu-item-78601" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-78601"><a href="http://www.iccsafe.org/codes-tech-support/guideline-development/ctc-area-of-study-carbon-monoxide-detectors/">CTC Area of Study: Carbon Monoxide Detectors</a></li>
+                      <li id="menu-item-78600" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-78600"><a href="http://www.iccsafe.org/codes-tech-support/guideline-development/ctc-area-of-study-climbable-guards/">CTC Area of Study: Climbable Guards</a></li>
+                    </ul>
+                  </ul>
+                </div>
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="#">Technical Support</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                     <li id="menu-item-42503" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42503"><a href="http://www.iccsafe.org/codes-tech-support/technical-opinions/">Technical Opinions</a></li>
+                     <li id="menu-item-42504" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42504"><a href="http://www.iccsafe.org/codes-tech-support/technical-opinions/interpretation-committees/">Interpretation Committees</a></li>
+                     <li id="menu-item-42505" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42505"><a href="http://www.iccsafe.org/codes-tech-support/requesting-committee-interpretations/">Requesting Committee Interpretations</a></li>
+                    </ul>
+                  </ul>
+                </div>
+                <div class = "span1">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="#">Plan Review</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                      <li id="menu-item-42523" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42523"><a href="http://www.iccsafe.org/codes-tech-support/plan-review-services/">Services</a></li>
+                      <li id="menu-item-42508" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42508"><a href="http://www.iccsafe.org/codes-tech-support/codes/code-development-process/building-valuation-data/">Building Valuation Data</a></li>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Education &amp; Certification <span class="caret"></span></a>
+          <ul class = "dropdown-menu multi-column" style = "width:1200px; left:-303%; align:center">
+            <div class = "container-fluid">
+              <div class = "row-fluid">
+                <div class = "span">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="#">Education</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                     <li id="menu-item-42514" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42514"><a href="http://www.iccsafe.org/education-certification/education/training-events/">Training Events</a></li>
+                     <li id="menu-item-42515" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42515"><a href="http://www.iccsafe.org/education-certification/education/hire-icc-to-teach/">Hire ICC to Teach</a></li>
+                     <li id="menu-item-42516" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42516"><a href="http://www.iccsafe.org/education-certification/education/online-training/">Online Training</a></li>
+                     <li id="menu-item-42517" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42517"><a target="_blank" href="http://ppp.iccsafe.org/index.php/search-listing">Preferred Provider Courses</a></li>
+                     <li id="menu-item-42518" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42518"><a href="http://www.iccsafe.org/education-certification/education/">CEU Portal</a></li>
+                    </ul>
+                  </ul>
+                </div>
+
+                <div class = "span">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="#">Certification and Testing</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                     <li id="menu-item-43255" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-43255"><a href="#">Certification and Testing</a>
+                      <ul class="sub-menu">
+                        <li id="menu-item-42525" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42525"><a href="http://www.iccsafe.org/education-certification/certification-and-testing/">Overview</a></li>
+                        <li id="menu-item-42535" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42535"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/contractortrades-exams/">Contractor Testing</a></li>
+                        <li id="menu-item-53396" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-53396"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/certification-renewal-3/">Certification Renewal</a></li>
+                        <li id="menu-item-42526" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-42526"><a href="http://www.iccsafe.org/#">Certification Exams</a>
+                          <ul class="sub-menu">
+                            <li id="menu-item-43256" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-43256"><a href="#">National Certifications</a>
+                              <ul class="sub-menu">
+                                <li id="menu-item-66756" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66756"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/national-certifications/">Overview</a></li>
+                                <li id="menu-item-66757" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66757"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/national-exam-info-registration/">National Exam Info &amp; Registration</a></li>
+                              </ul>
+                            </li>
+                            <li id="menu-item-42531" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-42531"><a href="http://www.iccsafe.org/#">State Certification</a>
+                              <ul class="sub-menu">
+                                <li id="menu-item-42532" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42532"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/state-specific-exams/">State Exams Information and Registration</a></li>
+                                <li id="menu-item-42533" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42533"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/ustast-certification-program/">UST-AST</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li id="menu-item-43236" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-43236"><a href="#">About Certification and Testing</a>
+                          <ul class="sub-menu">
+                            <li id="menu-item-43416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43416"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/faq-certification-and-testing/">FAQs</a></li>
+                            <li id="menu-item-42540" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42540"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/news-information/">News &amp; Information</a></li>
+                            <li id="menu-item-42541" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42541"><a target="_blank" href="https://av.iccsafe.org/EWEB/DynamicPage.aspx?Site=icc&amp;WebKey=b7afd990-2e14-4013-a186-aeb405641a95&amp;FromSearchControl=Yes">Search ICC Code Professionals</a></li>
+                          </ul>
+                        </li>
+                        <li id="menu-item-42542" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-42542"><a href="#">Services for Jurisdictions</a>
+                          <ul class="sub-menu">
+                            <li id="menu-item-42543" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42543"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/get-everyone-certified/">Target’s Get Everyone Certified</a></li>
+                            <li id="menu-item-42544" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42544"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/state-jurisdiction-certifications/services-for-jurisdictions/">Custom Test Development</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    </ul>
+                  </ul>
+                </div>
+
+                <div class = "span">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"><a href="http://ppp.iccsafe.org/">Preferred Provider Program</a></li>
+                    <li role = "separator" class = "divider"></li>
+                    <ul class="sub-menu">
+                    
+                   </ul>
+                 </ul>
+               </div>
+
+               <div class = "span">
+                <ul class = "dropdown-menu">
+                  <li class="dropdown-header"><a href="#">Councils and Committees</a></li>
+                  <li role = "separator" class = "divider"></li>
+                  <ul class="sub-menu">
+                    <li id="menu-item-42546" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42546"><a href="http://www.iccsafe.org/education-certification/certifications-and-testing/professional-development-council-pdc/">Professional Development Council</a></li>
+                    <li id="menu-item-42547" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42547"><a href="http://www.iccsafe.org/education-certification/education/education-committee/">Education Committee</a></li>
+                    <li id="menu-item-42548" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42548"><a href="http://www.iccsafe.org/education-certification/education/certification-committee/">Certification Committee</a></li>
+                    <li id="menu-item-42549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42549"><a href="http://www.iccsafe.org/exam-development-committee/">Exam Development Committee</a></li>
+                    <li id="menu-item-42562" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-42562"><a href="http://www.iccsafe.org/membership/councils-committees/call-for-committees/">Call for Committees</a></li>
+                  </ul>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Store <span class="caret"></span></a>
+          <ul class = "dropdown-menu multi-column">
+            <div class = "container-fluid">
+              <div class = "row-fluid">
+                <div class = "span">
+                  <ul class = "dropdown-menu">
+                    <li class="dropdown-header"></li>
+                   
+                    <ul class="sub-menu">
+                      <li id="menu-item-42556" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42556"><a target="_blank" href="http://shop.iccsafe.org">Store Homepage</a></li>
+                      <li id="menu-item-42552" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42552"><a target="_blank" href="http://shop.iccsafe.org/codes/2015-international-codes-and-references.html">2015 International Codes &amp; References</a></li>
+                      <li id="menu-item-42558" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42558"><a target="_blank" href="http://shop.iccsafe.org/codes/2015-international-code-commentaries.html">2015 Code and Commentary</a></li>
+                      <li id="menu-item-42553" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42553"><a target="_blank" href="http://shop.iccsafe.org/codes/2012-international-codes.html">2012 International Codes &amp; References</a></li>
+                      <li id="menu-item-49161" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49161"><a href="http://shop.iccsafe.org/codes/2012-international-code-commentaries.html">2012 Code and Commentary</a></li>
+                      <li id="menu-item-42554" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42554"><a target="_blank" href="http://shop.iccsafe.org/codes/2009-international-codes.html">2009 International Codes &amp; References</a></li>
+                      <li id="menu-item-42555" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42555"><a target="_blank" href="http://shop.iccsafe.org/state-and-local-codes.html">State &amp; Local Codes</a></li>
+                      <li id="menu-item-42559" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42559"><a target="_blank" href="http://shop.iccsafe.org/standards.html">Standards</a></li>
+                      <li id="menu-item-42557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42557"><a target="_blank" href="https://shop.iccsafe.org/customer/account/login/referer/aHR0cDovL3Nob3AuaWNjc2FmZS5vcmcvZWNvZGVzL2FjY291bnQvcHJvZHVjdHMv/">premiumACCESS</a></li>
+                    </ul>
+                  </ul>
+                </div>
+
+                
+              </div>
+            </div>
+          </ul>
+        </li>
+        <% if user_signed_in? %>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <% end %>
+      </ul>  
+    </div>
+  </div>
 </nav>
 
 
