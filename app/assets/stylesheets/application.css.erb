@@ -17,7 +17,39 @@ body{
   font-family: "Ubuntu", Arial, sans-serif;
 }
 
-
+.navbar-nav .dropdown-menu {
+  min-height: auto;
+  border-top: none;
+}
+.navbar-nav .dropdown-menu li {
+  padding: 0;
+}
+.navbar-nav .dropdown-menu a {
+  font-size: 12px;
+  white-space: normal;
+}
+ul.nav.navbar-nav.navbar-right .dropdown-menu a:hover {
+  color: green;
+}
+.navbar-nav .dropdown-menu ul {
+  padding-left: 20px;
+}
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.navbar-nav .dropdown:hover > a {
+  color: green !important;
+  background-color: #fff !important;
+}
+.navbar-nav .inner-dropdown {
+  display: none;
+}
+.navbar-nav .inner-dropdown.open {
+  display: block;
+}
+.navbar-nav .inner-dropdown li {
+  display: inline-block;
+}
 
 .site-footer,
 .site-info,

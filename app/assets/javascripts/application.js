@@ -16,5 +16,10 @@
 //= require_tree .
 $(document).ready(function(){
   $("#alertBox").fadeOut(10000);
-  
+  $('.navbar-nav .has-inner-dropdown').on('click', function(e){
+    e.preventDefault();
+    $('#' + $(this).data('target')).toggleClass('open');
+    console.log($(this).parents('.dropdown').length);
+    $(this).parents('.dropdown').addClass('open');
+  });
 });

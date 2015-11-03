@@ -15,5 +15,10 @@
 </head>
 <body>
   <%= yield :layout %>
+  <script>
+    $(document).ready(function(){
+      document.getElementById("back-button").style.display = "none";  
+    });
+  </script>
 </body>
 </html>
