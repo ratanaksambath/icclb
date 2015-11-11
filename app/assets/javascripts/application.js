@@ -22,4 +22,8 @@ $(document).ready(function(){
     console.log($(this).parents('.dropdown').length);
     $(this).parents('.dropdown').addClass('open');
   });
+  $('.navbar-toggle').click(function(){
+    $("#navbar-ex1-collapse").css('visibility','visible');
+
+  });
 });

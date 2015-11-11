@@ -19,7 +19,7 @@ body{
 }
 
 .navbar-nav .dropdown-menu {
-  min-height: auto;
+  min-height: auto !important;
   border-top: none;
 }
 .navbar-nav .dropdown-menu li {
@@ -35,9 +35,7 @@ ul.nav.navbar-nav.navbar-right .dropdown-menu a:hover {
 .navbar-nav .dropdown-menu ul {
   padding-left: 20px;
 }
-.navbar-nav .dropdown:hover .dropdown-menu {
-  display: block;
-}
+
 .navbar-nav .dropdown:hover > a {
   color: green !important;
   background-color: #fff !important;
@@ -108,9 +106,6 @@ ul.nav.navbar-nav.navbar-right .dropdown-menu a:hover {
 
 
 li {list-style-type: none;}
-
-
-
 
 .form-signin
 {
@@ -184,6 +179,7 @@ li {list-style-type: none;}
 }
 
 .jumbotron{
+  position:inherit;
   background-image: url('<%= asset_path("longbeach.jpg")%>');
   background-repeat: none;
   background-size: cover;
@@ -204,20 +200,6 @@ li {list-style-type: none;}
   margin:100px auto;
   text-align:center;
 }
-
-body > nav > div > div.container,
-body > nav > div > div.container > ul,
-body > nav > div > div.container > ul > li,
-body > nav > div > div.container > ul > li a.dropdown-toggle,
-body > nav > div {
-  height: 100% !important;
-}
-
-
-body > nav > div > div.container > ul > li.dropdown > ul {
-  margin-top: -14px !important;
-}
-
  .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
@@ -263,14 +245,6 @@ body > nav > div > div.container > ul > li.dropdown > ul {
     box-shadow: none !important;
     max-width: 200px;
 
-}
-
-body > nav > div > div.container > ul > li.dropdown > ul > div > div{
-  display: inline-flex !important;
-}
-
-body > nav > div > div.navbar-header{
-  max-width: 40px;
 }
 
 .sub-menu a:hover{
